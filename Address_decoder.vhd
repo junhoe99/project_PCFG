@@ -50,15 +50,7 @@ architecture behavioral of address_decoder is
 begin
   process (m_pc_address)
   begin
-    case m_pc_address is
-      when "000000000" => A <= "00000001"; -- address 0
-      when "000000001" => A <= "00000010"; -- address 1
-      when "000000010" => A <= "00000100"; -- address 2
-      when "000000011" => A <= "00001000"; -- address 3
-      when "000000100" => A <= "00010000"; -- address 4
-      when "000000101" => A <= "00100000"; -- address 5
-      when "000000110" => A <= "01000000"; -- address 6
-      when "000000111" => A <= "10000000"; -- address 7
+    case m_pc_address is      
       when "10110000" => m_ <= '1'; -- address 180H :
       when "10110111" => m_ <= '1'; -- address 183H
       when "10111000" => m_CW_addr <= '1'; -- address 184H
