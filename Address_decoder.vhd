@@ -59,12 +59,13 @@ begin
       when "000000101" => A <= "00100000"; -- address 5
       when "000000110" => A <= "01000000"; -- address 6
       when "000000111" => A <= "10000000"; -- address 7
+      when "10110000" => m_ <= '1'; -- address 180H :
+      when "10110111" => m_ <= '1'; -- address 183H
       when "10111000" => m_CW_addr <= '1'; -- address 184H
-      when "10110111" => m_MEM_addr <= '1'; -- address 183H
-      when "10110000" => m_XCLR_addr <= '1'; -- address 180H
-      when "10111010" => m_DA_start_addr <= '1'; -- address 186H
-      when "10111001" => m_DA_stop_addr <= '1'; -- address 185H
-      when "10111000" => m_CW_addr <= '1'; -- address 188H
+      when "10111001" => m_MEM_addr <= '1'; -- address 185H
+      when "10111010" => m_XCLR_addr <= '1'; -- address 186H
+      when "10111000" => m_DA_start_addr <= '1'; -- address 188H
+      when "10111001" => m_DA_stop_addr <= '1'; --address 189H
       when others => A <= "00000000"; -- invalid address
     end case;
     --db_en, PCS is not yet completed
